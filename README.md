@@ -49,6 +49,13 @@ RNSimData.getCountryCode()
 NOTE: React Native "Modules", when having only constants, work with getters, and the result of `getSimInfo()` is
 undefined, you need to access the properties to get any info
 
+## Promise based usage
+```es6
+import RNSimData from 'react-native-sim-data';
+
+const simData = await RNSimData.getSimData();
+```
+
 ### Caveats
 
 Might crash if tries to use in a phone without any SIM cards.
