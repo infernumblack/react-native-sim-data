@@ -5,6 +5,7 @@
 import { NativeModules } from 'react-native'
 
 export interface RNSimData {
+  [x: string]: any;
   carrierName0: string;
   displayName0: string;
   countryCode0: string;
@@ -45,5 +46,8 @@ export default {
   },
   getCountryCode() {
     return RNSimData.countryCode0
+  },
+  getSimData() {
+    return RNSimData.getSimData()
   }
 }
